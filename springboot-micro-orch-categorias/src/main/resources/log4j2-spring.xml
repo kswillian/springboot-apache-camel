@@ -1,0 +1,18 @@
+<Configuration status="DEBUG" encoding="UTF-8">
+    <Appenders>
+        <Console name="LogToConsole" target="SYSTEM_OUT">
+            <PatternLayout disableAnsi="false" pattern="%highlight{%d{HH:mm:ss.SSS} %-5level %logger{36} - %msg%n}{FATAL=bright_red, ERROR=red, WARN=yellow, INFO=bright_white, DEBUG=green, TRACE=blue}"/>
+        </Console>
+        <File name="LogToFile" fileName="logs/springboot-micro-orch-categorias.log">
+            <PatternLayout>
+                <Pattern>%d{HH:mm:ss.SSS} %-5level %logger{36} - %msg%n</Pattern>
+            </PatternLayout>
+        </File>
+    </Appenders>
+    <Loggers>
+        <Root level="info">
+            <AppenderRef ref="LogToFile"/>
+            <AppenderRef ref="LogToConsole"/>
+        </Root>
+    </Loggers>
+</Configuration>

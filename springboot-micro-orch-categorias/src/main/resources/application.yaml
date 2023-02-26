@@ -1,0 +1,4 @@
+spring:
+  backend:
+    urlMicroProdutos: http://localhost:8081/v1/produtos
+    urlMicroCategorias: http://localhost:8082/v1/categorias
